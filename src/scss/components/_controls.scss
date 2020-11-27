@@ -1,0 +1,64 @@
+.controls {
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.controls__speech {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background-image: url("../assets/img/speaking.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  z-index: 20px;
+  background-color: rgba(76, 82, 85, 0.6);
+  border-radius: 50%;
+}
+
+.controls__speech.pulse {
+  background-color: #ff886a;
+}
+
+.controls__speech.pulse {
+  -moz-box-shadow: 0 0 0 0 rgba(255,136,106, 0.6);
+  box-shadow: 0 0 0 0 rgba(255,136,106, 0.6);
+}
+
+.voice {
+  width: 44px;
+  height: 44px;
+  border-radius: 5px;
+  background: rgba(76, 82, 85, 0.6);
+  background-image: url("../assets/img/play.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.voice:hover,
+.voice:active {
+  background-color: #ff886a;
+  cursor: pointer;
+}
+
+.voice--active {
+  background-image: url("../assets/img/stop.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.voice--active:hover,
+.voice--active:active {
+  background-color: rgba(174, 181, 185, 0.5);
+}
+
+@media (max-width: 375px) {
+  .voice,
+  .controls__label {
+    width: 36px;
+    height: 36px;
+  }
+}

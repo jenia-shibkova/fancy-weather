@@ -83,7 +83,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({
       template: 'index.html',
-      favicon: 'favicon.ico',
+      favicon: 'favicon.png',
       minify: {
         removeComments: isProd,
         collapseWhitespace: isProd

@@ -1,0 +1,31 @@
+.error {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  min-height: 30px;
+  border-radius: 3px;
+  z-index: 30;  
+  color: white;
+  right: 30px;
+  top: 75px;  
+  box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+  background-color: #333;
+  border-left: 8px solid #fe5e00;
+}
+
+.error::before {
+  content: ''; 
+  position: absolute;
+  left: 15px;
+  top: -20px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #333;
+}
+
+@media (max-width: 767px) {
+  .error {
+    top: 130px;
+  }
+}  

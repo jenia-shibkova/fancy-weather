@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import
+  "utils/vars",
+  "utils/mixins";
+
+@import "vendors/normalize";
+
+@import 
+  "components/button",
+  "components/lang-switcher",
+  "components/degrees-switcher",
+  "components/icons",
+  "components/rotate",
+  "components/error",
+  "components/pulse",
+  "components/modal",
+  "components/voice-info",
+  "components/controls";
+
+@import 
+  "layout/app",
+  "layout/header",
+  "layout/header-buttons",
+  "layout/search",
+  "layout/navigation",
+  "layout/content",
+  "layout/region",
+  "layout/data-time",
+  "layout/weather",
+  "layout/geolocation",
+  "layout/temp-today",
+  "layout/week-days-temp",
+  "layout/week-weather";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $mainFont;
+  font-weight: 400;
+  color: $default-color;
+  background-color: lightgrey;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container {
+ // max-width: 1060px;
+  max-width: 1256px;
+  margin: 0 auto;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.active-lang {
+  font-family: $mainFont;
+  font-weight: 400;
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+    padding: 0 20px;
+  }  
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    max-width: 440px;
+    padding: 0 10px;
+  }  
+}
+
+@media (max-width: 460px) {
+  .container {
+    max-width: 100%;
+    padding: 0 18px;
+  }  
+}

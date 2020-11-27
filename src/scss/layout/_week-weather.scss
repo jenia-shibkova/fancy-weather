@@ -1,0 +1,135 @@
+.week-weather__region {
+}
+
+.week-weather__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;  
+}
+
+.week-weather__item {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  border-bottom: 1px solid white;
+  padding: 0 10px;
+  height: 50px;
+}
+
+.week-weather__day {
+  min-width: 170px;
+}
+
+.week-weather__icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+.week-weather__weather,
+.week-weather__humidity,
+.week-weather__degree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.week-weather__humidity-icon {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  margin-right: 18px;
+  background-image: url("../assets/img/humidity.svg");
+}
+
+.week-weather__day-icon,
+.week-weather__night-icon {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  margin-right: 18px;
+}
+
+.week-weather__day-icon {
+  background-image: url("../assets/img/sun.svg");
+}
+
+.week-weather__night-icon {
+  width: 19px;
+  height: 19px;
+  background-image: url("../assets/img/moon.svg");
+}
+
+.week-weather__desc {
+  min-width: 60px;
+}
+
+@media (max-width: 900px) {
+  .week-weather__weather {
+    padding-right: 20px;
+  }
+
+  .week-weather__item {
+    flex-wrap: wrap;
+    height: 70px;
+  }
+
+  .week-weather__day {
+    width: 100%;
+  }
+
+  .week-weather__icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    margin-top: 2px;
+  }
+  
+  .week-weather__humidity-icon {
+    width: 19px;
+    height: 19px;
+  }
+
+  .week-weather__humidity-icon,
+  .week-weather__day-icon,
+  .week-weather__night-icon {
+    margin-right: 6px;
+  }
+}
+
+@media (max-width: 375px) {
+  .week-weather__weather {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 374px) {
+  .week-weather__item {
+    padding: 0;
+  }
+
+  .week-weather__desc {
+    min-width: 50px;
+  }
+
+  .week-weather__icon {
+    margin-right: 0px;
+  }  
+
+  .week-weather__humidity-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .week-weather__day-icon {
+    width: 16px;
+    height: 16px;
+  } 
+  
+  .week-weather__night-icon {
+    width: 13px;
+    height: 13px;
+  }
+}

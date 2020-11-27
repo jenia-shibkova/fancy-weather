@@ -1,0 +1,23 @@
+.app {
+  background-color: white;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 20px;
+  position: relative; 
+  transition: background-image 0.3s ease-in-out; 
+  background-color: lightseagreen;
+}
+
+.spinner {
+  background-image: url("../assets/img/spinner.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50px;
+}
+
+@media (max-width: 375px) {
+  .app {
+    height: 100%;
+  }  
+}

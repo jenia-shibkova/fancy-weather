@@ -1,0 +1,46 @@
+.weather {
+  max-width: 710px;
+  width: 60%;
+  background: rgba(104, 139, 156, 0.3);
+  padding: 15px 30px 15px 15px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.weather::before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 2px);
+  height: 46px;
+  top: -61px;
+  left: -2px;
+  background: rgba(104, 139, 156, 0.4);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: 3;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.weather--week {
+  padding: 15px;
+}
+
+@media (max-width: 992px) {   
+  .weather {
+    width: 60%;  
+  } 
+}
+
+@media (max-width: 768px) {
+  .weather::before { 
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+ .weather {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
