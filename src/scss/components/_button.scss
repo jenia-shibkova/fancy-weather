@@ -1,0 +1,54 @@
+@import "../utils/vars";
+
+.button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.button__units {
+  font-size: 14px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: $default-color;
+  width: 44px;
+  height: 44px;
+  background: rgba(76, 82, 85, 0.6);
+  margin: 0;
+}
+
+.button__units--fahrenheit {
+  border-bottom-left-radius: 5px;
+}
+
+.button__units--celsius {
+  border-bottom-right-radius: 5px;
+}
+
+.active {
+  background: $button-color;
+}
+
+.button__units:hover,
+.button__units:active,
+.button__search:hover,
+.button__search:active {
+  background-color: $button-color;
+}
+
+@media (max-width: 375px) {
+  .button__image-upload,
+  .button__units--fahrenheit,
+  .button__units--celsius,
+  .button__celsius {
+    line-height: 36px;
+    width: 36px;
+    height: 36px;
+  }  
+}

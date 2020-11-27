@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Fancy-weather</title>
+</head>
+<body>
+  <div id="app">
+
+    <header class="header">
+      <div class="header__wrapper container">
+        <div class="header-buttons">
+          <button id="image-upload" class="button header-buttons__image-upload" type="button">
+            <svg class="upload rotating" viewBox="0 0 15 20" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.0491975 10.7003C-0.0686153 9.64172 0.029562 8.61981 0.296604 7.67525C1.18413 4.53623 3.96844 2.22777 7.27112 2.18705V0.135087C7.27112 0.021089 7.40857 -0.0399815 7.49889 0.0292317L11.5713 3.13161C11.638 3.18454 11.638 3.29039 11.5713 3.33925L7.50282 6.44163C7.40857 6.51084 7.27505 6.44977 7.27505 6.33577V4.28788C5.10337 4.32452 3.24978 5.71285 2.45258 7.67525C2.15019 8.41624 1.99704 9.23458 2.04023 10.0936C2.09914 11.2743 2.52719 12.3614 3.20265 13.2408C3.56395 13.709 3.47755 14.393 3.01023 14.7472C2.56646 15.0851 1.94598 14.9915 1.60433 14.5436C0.767855 13.4607 0.210208 12.1415 0.0491975 10.7003ZM11.8069 6.7592C12.4863 7.63454 12.9144 8.72566 12.9693 9.90636C13.0125 10.7695 12.8554 11.5878 12.557 12.3247C11.7598 14.2871 9.9062 15.6796 7.73452 15.7121V13.6642C7.73452 13.5502 7.59707 13.4892 7.50675 13.5584L3.43435 16.6607C3.36759 16.7137 3.36759 16.8195 3.43435 16.8684L7.50282 19.9708C7.59707 20.04 7.73059 19.9789 7.73059 19.8649V17.8129C11.0333 17.7763 13.8215 15.4678 14.7051 12.3247C14.9721 11.3802 15.0664 10.3583 14.9525 9.29973C14.7954 7.85846 14.2378 6.53934 13.4013 5.45636C13.0557 5.00851 12.4392 4.91487 11.9954 5.25279C11.532 5.607 11.4456 6.29099 11.8069 6.7592Z" fill="white"/>
+            </svg>
+          </button>
+          <div class="header-buttons__lang-switcher lang-switcher">          
+            <label for="select" class="lang-switcher__label">
+              <select id="lang" class="lang-switcher__select" name="options">
+                <option id="en" class="lang-switcher__option" value="en" selected>en</option>
+                <option id="ru" class="lang-switcher__option" value="ru">ru</option>
+                <option id="be" class="lang-switcher__option" value="be">be</option>
+              </select>
+            </label>
+          </div>
+          <div class="header-buttons__degrees degrees-switcher">
+            <button id="fahrenheit" class="button button__units button__units--fahrenheit" type="button"><sup>°</sup>F</button>
+            <button id="celsius" class="button button__units button__units--celsius active" type="button"><sup>°</sup>C</button>
+          </div>
+          <div class="header-buttons__controls controls">
+            <button class="button controls__speech"></button>
+            <button class="button voice" type="button"></button>
+          </div>
+        </div>
+
+        <form class="search">
+          <div class="search__wrapper">
+            <input id="search-input" type="text" class="search__input" name="text" placeholder="Search city" autocomplete="off"/>
+            <button type="button" class="button search__button-voice">
+              <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.86774 11.003C7.00412 11.003 6.26271 10.7403 5.64351 10.2149C5.02431 9.68954 4.71472 9.06737 4.71472 8.34841V3.03921C4.71472 2.29261 5.02431 1.66352 5.64351 1.15196C6.26271 0.640395 7.00412 0.384613 7.86774 0.384613C8.73135 0.384613 9.46462 0.640395 10.0675 1.15196C10.6704 1.66352 10.9719 2.29261 10.9719 3.03921V8.34841C10.9719 9.06737 10.6704 9.68954 10.0675 10.2149C9.46462 10.7403 8.73135 11.003 7.86774 11.003ZM13.3672 8.34841H15.1759C15.1759 9.84163 14.5649 11.1482 13.3428 12.2681C12.1207 13.388 10.646 14.0586 8.91874 14.2798V17.1833H6.81673V14.2798C5.08949 14.0586 3.61482 13.3811 2.39272 12.2474C1.17062 11.1136 0.55957 9.81398 0.55957 8.34841H2.3194C2.3194 9.62041 2.87342 10.685 3.98145 11.5422C5.08949 12.3994 6.38492 12.8281 7.86774 12.8281C9.35055 12.8281 10.6378 12.3994 11.7296 11.5422C12.8213 10.685 13.3672 9.62041 13.3672 8.34841Z" fill="white" fill-opacity="0.4"/>
+              </svg>
+            </button>          
+            <button type="submit" class="search__button button en active-lang">Search</button>
+            <button type="submit" class="search__button button ru none">Поиск</button>
+            <button type="submit" class="search__button button be none">Пошук</button>
+          </div>  
+        </form>
+        
+        <div class="voice-info"> 
+          <div class="voice-info__wrapper">
+            <button type="button" class="button voice-info__button"></button> 
+
+            <div class="modal modal--none">
+              <div class='modal__content'> 
+                <h2 class="modal__main-title">List of voice commands:</h2>
+                <ul class="modal__list word-list">
+                  <li class="modal-list__item">
+                    <strong class="word-list__word">'Weather forecast' & 'Forecast' &mdash;</strong>
+                    <span class="word-list__desc">Launch today’s voice weather alert.</span>
+                  </li>
+                  <li class="modal-list__item">
+                    <strong class="word-list__word">'Increase' &mdash;</strong>
+                    <span class="word-list__desc">Increase the volume.</span>
+                  </li>
+                  <li class="modal-list__item">
+                    <strong class="word-list__word">'Decrease' &mdash;</strong>
+                    <span class="word-list__desc">Decrease the volume.</span>
+                  </li>
+                </ul>
+                
+              </div>
+            </div> 
+          </div>                               
+        </div>
+
+      </div>              
+
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li id="today" class="navigation__item navigation__item--today navigation__item--active">
+            <span class="en active-lang">Today</span>
+            <span class="ru none">Сегодня</span>
+            <span class="be none">Cёння</span>
+          </li>
+          <li id="tomorrow" class="navigation__item">
+            <span class="en active-lang">Tomorrow</span>
+            <span class="ru none">Завтра</span>
+            <span class="be none">Заўтра</span>
+          </li>
+          <li id="week" class="navigation__item">
+            <span class="en active-lang">7 days</span>
+            <span class="ru none">7 дней</span>
+            <span class="be none">7 дзён</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+   
+    <main class="main-content container">
+      <div class="weather">
+        <div class="today-weather">
+
+          <h2 class="region">
+            <span class="region__city voice-en en active-lang">${this.city.en},</span>
+            <span class="region__city voice-ru ru none">${this.city.ru},</span>
+            <span class="region__city be none">${this.city.be},</span>
+            <span class="region__country voice-en en active-lang">${this.country.en}</span>
+            <span class="region__country voice-ru ru none">${this.country.ru}</span>
+            <span class="region__country be none">${this.country.be}</span>
+          </h2>
+
+          <div class="data-time">
+            <div class="data">               
+              <span class="data voice-en en active-lang">${this.date.en}</span>            
+              <span class="data voice-ru ru none">${this.date.ru}</span>
+              <span class="data be none">${this.date.be}</span>
+            </div>
+            <span class="time"></span>
+          </div> 
+
+          <div class="temp-today">
+            <p class="temp-today__degrees">
+              <span class="temp-today__degree voice-en voice-ru degrees">
+                120
+                <!-- ${this.temp} -->
+              </span><sup class="voice-en voice-ru">°</sup>
+              <i class="temp-today__icon">
+                <!-- ${this.weather_icon.getTemplate()} -->
+              </i>
+            </p>
+
+            <div class="temp-today__desc">
+              <span class="temp-today__type voice-en en active-lang">${this.weather.en}</span>
+              <span class="temp-today__type voice-ru ru none">${this.weather.ru}</span>
+              <span class="temp-today__type be none">${this.weather.be}</span>
+              <p class="temp-today__feels">
+                <span class="temp-today__feels-desc voice-en en active-lang">Feels like:</span>
+                <span class="temp-today__feels-desc voice-ru ru none">Чувствуется, как:</span>
+                <span class="temp-today__feels-desc be none">Адчуваецца, як:</span>
+                <span class="temp-today__feels-value">
+                <span class="degrees voice-en voice-ru">${this.feelsLike}</span><sup class="voice-en voice-ru">°</sup>
+                </span>
+              </p>
+              <p class="temp-today__wind">
+                <span class="temp-today__wind-desc voice-en en active-lang">Wind:</span>
+                <span class="temp-today__wind-desc voice-ru ru none">Ветер:</span>
+                <span class="temp-today__wind-desc be none">Вецер:</span>
+                <span class="temp-today__wind-value">
+                  <span class="voice-en voice-ru">${this.wind}</span>
+                  <span class="en voice-en active-lang">m/s</span>
+                  <span class="ru voice-ru none">м/с</span>
+                  <span class="be none">м/с</span>
+                </span>
+              </p>
+              <p class="temp-today__humidity">
+                <span class="temp-today__humidity-desc voice-en en active-lang">Humidity:</span>
+                <span class="temp-today__humidity-desc voice-ru ru none">Влажность:</span>
+                <span class="temp-today__humidity-desc be none">Вільготнасць:</span>
+                <span class="temp-today__humidity-value voice-en voice-ru">${this.humidity}%</span>
+              </p>
+            </div>            
+          </div>
+
+          <div class="week-days-temp">
+            <div class="week-temperature__day-temp">
+              <span class="week-days-temp__day-name en active-lang">
+                Monday
+                <!-- ${this.weekday_0.dayNamesObj.en} -->
+              </span>
+              <span class="week-days-temp__day-name ru none">${this.weekday_0.dayNamesObj.ru}</span>
+              <span class="week-days-temp__day-name be none">${this.weekday_0.dayNamesObj.be}</span>
+              <p class="week-days-temp__degrees">
+                <span class="week-days-temp__degree degrees">
+                  120
+                  <!-- ${Math.floor(this.weekday_0.temp.day)} -->
+                </span><sup>°</sup>
+                <i class="week-days-temp__icon">
+                  <!-- ${this.weekday_0_icon.getTemplate()} -->
+                </i>
+              </p>
+            </div>
+
+            <div class="week-temperature__day-temp">
+              <span class="week-days-temp__day-name en active-lang">
+                Monday
+                <!-- ${this.weekday_1.dayNamesObj.en} -->
+              </span>
+              <span class="week-days-temp__day-name ru none">${this.weekday_1.dayNamesObj.ru}</span>
+              <span class="week-days-temp__day-name be none">${this.weekday_1.dayNamesObj.be}</span>
+              <p class="week-days-temp__degrees">
+                <span class="week-days-temp__degree degrees">
+                  120
+                  <!-- ${Math.floor(this.weekday_1.temp.day)} -->
+                </span><sup>°</sup>
+                <i class="week-days-temp__icon">
+                  <!-- ${this.weekday_1_icon.getTemplate()} -->
+                </i>
+              </p>
+            </div>
+
+            <div class="week-temperature__day-temp">
+              <span class="week-days-temp__day-name en active-lang">
+                Monday
+                <!-- ${this.weekday_2.dayNamesObj.en} -->
+              </span>
+              <span class="week-days-temp__day-name ru none">${this.weekday_2.dayNamesObj.ru}</span>
+              <span class="week-days-temp__day-name be none">${this.weekday_2.dayNamesObj.be}</span>
+              <p class="week-days-temp__degrees">
+                <span class="week-days-temp__degree degrees">
+                  120
+                  <!-- ${Math.floor(this.weekday_2.temp.day)} -->
+                </span><sup>°</sup>
+                <i class="week-days-temp__icon">
+                  <!-- ${this.weekday_2_icon.getTemplate()} -->
+                </i>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="geolocation">
+        <div id="map" class="geolocation__map"></div>        
+        <div class="geolocation__coordinates">
+          <div class="geolocation__latitude latitude">  
+            <span class="latitude en active-lang">Latitude:</span>
+            <span class="latitude__desc ru none">Широта:</span>
+            <span class="latitude__desc be none">Шырата:</span>
+            <span class="latitude__degrees">${this.latitude.degree}°</span>
+            <span class="latitude__minute">${this.latitude.min}'</span>
+          </div>
+          <div class="geolocation__longitude longitude">
+            <span class="longitude__desc en active-lang">Longitude:</span>
+            <span class="longitude__desc ru none">Долгота:</span>
+            <span class="longitude__desc be none">Даўгата:</span>
+            <span class="longitude__degrees">${this.longitude.degree}°</span>
+            <span class="longitude__minute">${this.longitude.min}'</span>
+          </div>
+        </div>
+      </div>
+  </main>
+  </div>
+</body>
+</html>

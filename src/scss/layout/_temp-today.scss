@@ -1,0 +1,155 @@
+.temp-today {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;  
+  -webkit-box-align: end;  
+      -ms-flex-align: end;  
+          align-items: flex-end;
+}
+
+.temp-today__degrees {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 200px;
+  line-height: 200px;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.temp-today__icon {
+  position: absolute;
+  display: inline-block;
+  width: 170px;
+  height: 110px;
+  top: -40px;
+  right: -200px;
+}
+
+.temp-today__desc {
+  margin-left: 80px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.temp-today__desc p {
+  margin: 0;
+}
+
+.temp-today__feels-value,
+.temp-today__wind-value,
+.temp-today__humidity-value {
+  font-weight: 400;
+}
+
+
+@media (max-width: 1200px) {
+  .temp-today__desc {
+    font-size: 16px;
+    line-height: 28px;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 1024px) { 
+  .temp-today__degrees {
+    font-size: 130px;
+    line-height: 160px;
+  }
+
+   .temp-today__desc {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .temp-today {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 80%;
+  }
+
+  .temp-today__icon {
+    top: -10px;
+    right: -193px;
+  } 
+
+  .temp-today__desc {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .temp-today {
+    width: 100%;
+  }
+
+  .temp-today__desc {
+    width: 100%;    
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 425px) { 
+  .temp-today {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;    
+  }
+
+  .temp-today__desc {
+    padding-left: 30px;
+  }
+
+  .temp-today__degrees {
+    font-size: 90px;
+    line-height: 120px;
+    width: 100%;
+    padding-left: 30px;
+  }
+
+  .temp-today__icon {
+    width: 140px;
+    height: 100px;    
+    top: -14px;
+    right: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .temp-today__icon {
+    top: -18px;
+    right: -15px;
+  }
+}
+
+@media (max-width: 320px) { 
+  .temp-today__degrees {
+    font-size: 70px;
+    line-height: 100px;
+  }
+
+  .temp-today__icon {
+    width: 100px;
+    height: 80px;
+    top: 8px;
+    right: 0;
+  }
+}
