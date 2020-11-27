@@ -1,7 +1,3 @@
-| Deadline | Folder name | Branch name |
-| ----------- | ------------- | ------------- |
-| 31.05.2020 23:59 | fancy-weather | fancy-weather |
-
 # fancy-weather
 
 ## Задание
